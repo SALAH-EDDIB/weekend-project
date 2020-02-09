@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Bai+Jamjuree&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(images/bg-header-desktop.png);
+    background-size: 1460px 400px;
+    background-repeat: no-repeat;
+    font-family: 'Bai Jamjuree', sans-serif;
+
+}
+
+p {
+    color: hsl(201, 11%, 66%);
+}
+
+.head {
+    display: block;
+    margin: 100px auto;
+    text-align: center;
+
+    img {
+        height: 110px;
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        color: hsl(210, 10%, 33%);
+        font-size: 35px;
+    }
+
+
+
+    p {
+
+
+        margin-left: auto;
+        margin-right: auto;
+        width: 500px;
+        margin-bottom: 30px;
+
+
+    }
+
+    button {
+        padding: 10px 20px;
+        border: none;
+        background: none;
+        color: white;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all .4s ease-in-out;
+
+
+    }
+
+    .btn1 {
+        background-color: hsl(171, 66%, 44%);
+        margin-right: 7px;
+        border-bottom: 2px solid hsl(171, 66%, 44%);
+
+        &:hover {
+            background-color: hsl(171, 58%, 55%);
+            box-shadow: 0 4px 8px 0 rgba(74, 207, 187, .2), 0 6px 20px 0 rgba(8, 54, 47, 0.2);
+            border-bottom: 2px solid hsl(171, 66%, 44%);
+        }
+    }
+
+    .btn2 {
+        background-color: hsl(233, 100%, 69%);
+        margin-left: 7px;
+        border-bottom: 2px solid hsl(233, 100%, 69%);
+
+        &:hover {
+            background-color: hsl(233, 100%, 74%);
+            box-shadow: 0 4px 8px 0 rgba(112, 127, 245, .2), 0 6px 20px 0 rgba(112, 127, 245, .2);
+
+            border-bottom: 2px solid hsl(233, 100%, 69%);
+        }
+    }
+
+}
