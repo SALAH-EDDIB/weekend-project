@@ -1,3 +1,15 @@
+@mixin mq {
+
+
+    @media (max-width: 380px) {
+        @content;
+    }
+
+
+
+}
+
+
 @import url('https://fonts.googleapis.com/css?family=Bai+Jamjuree&display=swap');
 
 body {
@@ -8,6 +20,77 @@ body {
     background-repeat: no-repeat;
     font-family: 'Bai Jamjuree', sans-serif;
 
+
+
+    @include mq() {
+        background-image: url(images/bg-header-mobile.png);
+        background-size: auto;
+
+
+    }
+
+}
+
+button {
+    padding: 14px 40px;
+    border: none;
+    background: none;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+
+    @include mq() {
+
+
+        padding: 14px 80px;
+        margin-bottom: 30px;
+
+    }
+
+
+}
+
+.btn1 {
+    background-color: hsl(171, 66%, 44%);
+    margin-right: 7px;
+    border-bottom: 2px solid hsl(171, 66%, 44%);
+
+    @include mq() {
+        margin-right: 0px;
+    }
+
+    &:hover {
+        background-color: hsl(171, 58%, 55%);
+        box-shadow: 0 4px 8px 0 rgba(74, 207, 187, .2), 0 6px 20px 0 rgba(8, 54, 47, 0.2);
+        border-bottom: 2px solid hsl(171, 66%, 44%);
+    }
+}
+
+.btn2 {
+    background-color: hsl(233, 100%, 69%);
+    margin-left: 7px;
+    border-bottom: 2px solid hsl(233, 100%, 69%);
+
+    @include mq() {
+        margin-left: 0px;
+    }
+
+    &:hover {
+        background-color: hsl(233, 100%, 74%);
+        box-shadow: 0 4px 8px 0 rgba(112, 127, 245, .2), 0 6px 20px 0 rgba(112, 127, 245, .2);
+
+        border-bottom: 2px solid hsl(233, 100%, 69%);
+    }
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: hsl(210, 10%, 33%);
 }
 
 p {
@@ -19,6 +102,8 @@ p {
     margin: 100px auto;
     text-align: center;
 
+
+
     img {
         height: 110px;
         margin-bottom: 20px;
@@ -26,7 +111,8 @@ p {
 
     h1 {
         color: hsl(210, 10%, 33%);
-        font-size: 35px;
+        font-size: 36px;
+
     }
 
 
@@ -36,47 +122,294 @@ p {
 
         margin-left: auto;
         margin-right: auto;
-        width: 500px;
+        width: 600px;
         margin-bottom: 30px;
+        font-size: 18px;
+
+        @include mq() {
+            font-size: 16px;
+            width: 320px;
+            margin-bottom: 50px;
+
+        }
 
 
     }
 
-    button {
-        padding: 10px 20px;
-        border: none;
-        background: none;
-        color: white;
-        border-radius: 50px;
+}
+
+.title2 {
+    text-align: center;
+
+    h2 {
+        font-size: 30px;
+    }
+
+    p {
+        width: 600px;
+        margin: 20px auto 90px;
+        font-size: 17px;
+
+        @include mq() {
+            font-size: 16px;
+            width: 300px;
+
+
+        }
+    }
+}
+
+.flex {
+    display: flex;
+    justify-content: space-around;
+
+    @include mq() {
+        display: block;
+        text-align: center;
+    }
+
+
+    .paras {
+        margin: -30px 250px 0 0;
+
+        @include mq() {
+            margin: 0;
+        }
+
+        .para {
+
+            margin: 70px 0;
+
+            h3 {
+                margin: 5px 0;
+                font-size: 24px;
+
+
+            }
+
+            p {
+                margin: 5px 0;
+                font-size: 15px;
+
+                @include mq() {
+
+                    width: 320px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
+
+
+
+
+
+        p {
+            width: 350px;
+        }
+    }
+
+    img {
+        position: relative;
+        right: 140px;
+
+        @include mq() {
+            position: static;
+            width: 80%;
+        }
+    }
+}
+
+.section2 {
+    text-align: center;
+
+    @include mq() {
+        img {
+            width: 90%;
+        }
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    p {
+        width: 600px;
+        margin: 20px auto 70px;
+        font-size: 17px;
+
+        @include mq() {
+            width: 320px;
+        }
+    }
+
+}
+
+.title3 {
+    text-align: center;
+
+
+    h2 {
+        font-size: 30px;
+
+        @include mq() {
+            width: 320px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    p {
+        font-size: 17px;
+
+        @include mq() {
+            width: 320px;
+            margin-bottom: 50px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+
+
+.float {
+
+    float: left;
+    width: 33%;
+    text-align: center;
+    margin-bottom: 100px;
+
+    @include mq() {
+        float: none;
+        text-align: center;
+        width: auto;
+        margin-bottom: 50px;
+    }
+
+    p {
+        width: 350px;
+        margin: 16px auto;
+
+
+
+
+    }
+}
+
+.imgs {
+    display: inline-block;
+
+    @include mq {
+        width: 100%;
+    }
+
+
+
+    img {
+        margin: 20px 71px 60px;
+
+        @include mq() {
+            display: block;
+            margin: 50px auto;
+
+        }
+    }
+}
+
+.section3 {
+    text-align: center;
+    margin-bottom: 50px;
+
+    h2 {
+        font-size: 30px;
+
+        @include mq() {
+            width: 320px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    p {
+        width: 600px;
+        margin: 16px auto;
+        font-size: 17px;
+        margin-bottom: 40px;
+
+        @include mq() {
+            width: 320px;
+        }
+    }
+}
+
+#footer {
+
+    background-color: hsl(180, 7%, 97%);
+    width: 100%;
+    height: 140px;
+
+    @include mq() {
+        height: 300px;
+    }
+
+    .h5 {
+        margin-top: 30px;
+
+        @include mq() {
+            margin-top: 0;
+        }
+
+
+    }
+
+    h5 {
+        display: inline-block;
+        margin: 0;
+        padding: 5px 60px;
+        font-weight: 100;
         cursor: pointer;
-        transition: all .4s ease-in-out;
 
-
-    }
-
-    .btn1 {
-        background-color: hsl(171, 66%, 44%);
-        margin-right: 7px;
-        border-bottom: 2px solid hsl(171, 66%, 44%);
+        @include mq() {
+            display: block;
+        }
 
         &:hover {
-            background-color: hsl(171, 58%, 55%);
-            box-shadow: 0 4px 8px 0 rgba(74, 207, 187, .2), 0 6px 20px 0 rgba(8, 54, 47, 0.2);
-            border-bottom: 2px solid hsl(171, 66%, 44%);
+            color: hsl(171, 58%, 55%);
         }
     }
 
-    .btn2 {
-        background-color: hsl(233, 100%, 69%);
-        margin-left: 7px;
-        border-bottom: 2px solid hsl(233, 100%, 69%);
+    .float2 {
+        float: left;
+        width: 33%;
 
-        &:hover {
-            background-color: hsl(233, 100%, 74%);
-            box-shadow: 0 4px 8px 0 rgba(112, 127, 245, .2), 0 6px 20px 0 rgba(112, 127, 245, .2);
+        @include mq() {
+            float: none;
+            text-align: center;
+            width: 100%;
 
-            border-bottom: 2px solid hsl(233, 100%, 69%);
         }
+
+    }
+}
+
+.logo img {
+    margin: 45px;
+
+    @include mq() {
+        margin: 0;
+        margin-top: 30px;
+    }
+
+
+}
+
+#mar {
+    position: relative;
+    left: 54px;
+
+    @include mq() {
+        position: static;
     }
 
 }

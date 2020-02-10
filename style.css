@@ -8,6 +8,77 @@ body {
   font-family: 'Bai Jamjuree', sans-serif;
 }
 
+@media (max-width: 380px) {
+  body {
+    background-image: url(images/bg-header-mobile.png);
+    background-size: auto;
+  }
+}
+
+button {
+  padding: 14px 40px;
+  border: none;
+  background: none;
+  color: white;
+  border-radius: 50px;
+  cursor: pointer;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+@media (max-width: 380px) {
+  button {
+    padding: 14px 80px;
+    margin-bottom: 30px;
+  }
+}
+
+.btn1 {
+  background-color: #26baa4;
+  margin-right: 7px;
+  border-bottom: 2px solid #26baa4;
+}
+
+@media (max-width: 380px) {
+  .btn1 {
+    margin-right: 0px;
+  }
+}
+
+.btn1:hover {
+  background-color: #4acfbb;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(74, 207, 187, 0.2), 0 6px 20px 0 rgba(8, 54, 47, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(74, 207, 187, 0.2), 0 6px 20px 0 rgba(8, 54, 47, 0.2);
+  border-bottom: 2px solid #26baa4;
+}
+
+.btn2 {
+  background-color: #6173ff;
+  margin-left: 7px;
+  border-bottom: 2px solid #6173ff;
+}
+
+@media (max-width: 380px) {
+  .btn2 {
+    margin-left: 0px;
+  }
+}
+
+.btn2:hover {
+  background-color: #7a8aff;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(112, 127, 245, 0.2), 0 6px 20px 0 rgba(112, 127, 245, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(112, 127, 245, 0.2), 0 6px 20px 0 rgba(112, 127, 245, 0.2);
+  border-bottom: 2px solid #6173ff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #4c545d;
+}
+
 p {
   color: #9fabb2;
 }
@@ -25,50 +96,308 @@ p {
 
 .head h1 {
   color: #4c545d;
-  font-size: 35px;
+  font-size: 36px;
 }
 
 .head p {
   margin-left: auto;
   margin-right: auto;
-  width: 500px;
+  width: 600px;
   margin-bottom: 30px;
+  font-size: 18px;
 }
 
-.head button {
-  padding: 10px 20px;
-  border: none;
-  background: none;
-  color: white;
-  border-radius: 50px;
+@media (max-width: 380px) {
+  .head p {
+    font-size: 16px;
+    width: 320px;
+    margin-bottom: 50px;
+  }
+}
+
+.title2 {
+  text-align: center;
+}
+
+.title2 h2 {
+  font-size: 30px;
+}
+
+.title2 p {
+  width: 600px;
+  margin: 20px auto 90px;
+  font-size: 17px;
+}
+
+@media (max-width: 380px) {
+  .title2 p {
+    font-size: 16px;
+    width: 300px;
+  }
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media (max-width: 380px) {
+  .flex {
+    display: block;
+    text-align: center;
+  }
+}
+
+.flex .paras {
+  margin: -30px 250px 0 0;
+}
+
+@media (max-width: 380px) {
+  .flex .paras {
+    margin: 0;
+  }
+}
+
+.flex .paras .para {
+  margin: 70px 0;
+}
+
+.flex .paras .para h3 {
+  margin: 5px 0;
+  font-size: 24px;
+}
+
+.flex .paras .para p {
+  margin: 5px 0;
+  font-size: 15px;
+}
+
+@media (max-width: 380px) {
+  .flex .paras .para p {
+    width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.flex .paras p {
+  width: 350px;
+}
+
+.flex img {
+  position: relative;
+  right: 140px;
+}
+
+@media (max-width: 380px) {
+  .flex img {
+    position: static;
+    width: 80%;
+  }
+}
+
+.section2 {
+  text-align: center;
+}
+
+@media (max-width: 380px) {
+  .section2 img {
+    width: 90%;
+  }
+}
+
+.section2 h2 {
+  font-size: 30px;
+}
+
+.section2 p {
+  width: 600px;
+  margin: 20px auto 70px;
+  font-size: 17px;
+}
+
+@media (max-width: 380px) {
+  .section2 p {
+    width: 320px;
+  }
+}
+
+.title3 {
+  text-align: center;
+}
+
+.title3 h2 {
+  font-size: 30px;
+}
+
+@media (max-width: 380px) {
+  .title3 h2 {
+    width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.title3 p {
+  font-size: 17px;
+}
+
+@media (max-width: 380px) {
+  .title3 p {
+    width: 320px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.float {
+  float: left;
+  width: 33%;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+@media (max-width: 380px) {
+  .float {
+    float: none;
+    text-align: center;
+    width: auto;
+    margin-bottom: 50px;
+  }
+}
+
+.float p {
+  width: 350px;
+  margin: 16px auto;
+}
+
+.imgs {
+  display: inline-block;
+}
+
+@media (max-width: 380px) {
+  .imgs {
+    width: 100%;
+  }
+}
+
+.imgs img {
+  margin: 20px 71px 60px;
+}
+
+@media (max-width: 380px) {
+  .imgs img {
+    display: block;
+    margin: 50px auto;
+  }
+}
+
+.section3 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section3 h2 {
+  font-size: 30px;
+}
+
+@media (max-width: 380px) {
+  .section3 h2 {
+    width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.section3 p {
+  width: 600px;
+  margin: 16px auto;
+  font-size: 17px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 380px) {
+  .section3 p {
+    width: 320px;
+  }
+}
+
+#footer {
+  background-color: #f7f8f8;
+  width: 100%;
+  height: 140px;
+}
+
+@media (max-width: 380px) {
+  #footer {
+    height: 300px;
+  }
+}
+
+#footer .h5 {
+  margin-top: 30px;
+}
+
+@media (max-width: 380px) {
+  #footer .h5 {
+    margin-top: 0;
+  }
+}
+
+#footer h5 {
+  display: inline-block;
+  margin: 0;
+  padding: 5px 60px;
+  font-weight: 100;
   cursor: pointer;
-  -webkit-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
 }
 
-.head .btn1 {
-  background-color: #26baa4;
-  margin-right: 7px;
-  border-bottom: 2px solid #26baa4;
+@media (max-width: 380px) {
+  #footer h5 {
+    display: block;
+  }
 }
 
-.head .btn1:hover {
-  background-color: #4acfbb;
-  -webkit-box-shadow: 0 4px 8px 0 rgba(74, 207, 187, 0.2), 0 6px 20px 0 rgba(8, 54, 47, 0.2);
-          box-shadow: 0 4px 8px 0 rgba(74, 207, 187, 0.2), 0 6px 20px 0 rgba(8, 54, 47, 0.2);
-  border-bottom: 2px solid #26baa4;
+#footer h5:hover {
+  color: #4acfbb;
 }
 
-.head .btn2 {
-  background-color: #6173ff;
-  margin-left: 7px;
-  border-bottom: 2px solid #6173ff;
+#footer .float2 {
+  float: left;
+  width: 33%;
 }
 
-.head .btn2:hover {
-  background-color: #7a8aff;
-  -webkit-box-shadow: 0 4px 8px 0 rgba(112, 127, 245, 0.2), 0 6px 20px 0 rgba(112, 127, 245, 0.2);
-          box-shadow: 0 4px 8px 0 rgba(112, 127, 245, 0.2), 0 6px 20px 0 rgba(112, 127, 245, 0.2);
-  border-bottom: 2px solid #6173ff;
+@media (max-width: 380px) {
+  #footer .float2 {
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.logo img {
+  margin: 45px;
+}
+
+@media (max-width: 380px) {
+  .logo img {
+    margin: 0;
+    margin-top: 30px;
+  }
+}
+
+#mar {
+  position: relative;
+  left: 54px;
+}
+
+@media (max-width: 380px) {
+  #mar {
+    position: static;
+  }
 }
 /*# sourceMappingURL=style.css.map */
